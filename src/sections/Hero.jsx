@@ -7,13 +7,30 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
+import { saveAs } from "file-saver";
+import { FaTelegram } from "react-icons/fa";
+import { FaThreads } from "react-icons/fa6";
 
 const Hero = () => {
   const socialLinks = [
-    { icon: Github, href: "#" },
-    { icon: Instagram, href: "#" },
-    { icon: Linkedin, href: "#" },
+    { icon: Github, href: "https://github.com/Ethayen-B" },
+    { icon: Instagram, href: "https://www.instagram.com/ze_amin24" },
+    { icon: FaTelegram, href: "https://t.me/ze_amin24"},
+    { icon: FaThreads, href: "https://www.threads.com/@ze_amin24"}
   ];
+
+  const handleDownload = () => {
+    const pdfUrl = "/PDF/Cv.pdf";
+    const pdfName = "Ethayen's_CV.pdf";
+
+    fetch(pdfUrl)
+      .then((res) => res.blob())
+      .then((blob) => {
+        saveAs(blob, pdfName);
+      })
+      .catch((err) => console.log("Download Error:", err));
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -89,11 +106,16 @@ const Hero = () => {
             </div>
             {/* CTA */}
             <div className="flex items-center gap-5 animate-fade-in animate-delay-400">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a href="#contactMe">
+                <Button size="sm">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
 
-              <button className="flex items-center gap-2 border border-primary px-8 py-4 rounded-full hover:bg-primary hover:text-foreground hover:shadow-lg hover:shadow-primary/50 hover:border-white">
+              <button
+                onClick={handleDownload}
+                className="flex text-xs items-center gap-2 border border-primary px-4 py-2 rounded-full hover:bg-primary hover:text-foreground hover:shadow-lg hover:shadow-primary/50 hover:border-white"
+              >
                 <Download className="w-5 h-5" /> Download Cv
               </button>
             </div>
@@ -107,7 +129,7 @@ const Hero = () => {
                   key={idx}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary hover:border-primary transition-all duration-300"
                 >
-                  {<link.icon />}
+                  {<link.icon size={24} />}
                 </a>
               ))}
             </div>

@@ -6,12 +6,13 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#contactMe", label: "Contact Me"}
 ];
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 bg-gray-700/70 py-5 right-0 z-50 rounded-br-3xl rounded-bl-3xl">
+    <header className="fixed top-0 left-0 bg-gray-700 py-5 right-0 z-50 rounded-br-3xl rounded-bl-3xl">
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
@@ -26,7 +27,7 @@ const NavBar = () => {
               <a
                 key={idx}
                 href={link.href}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground  rounded-full hover:bg-surface"
+                className="px-4 py-2 text-sm text-muted-foreground hover:text-primary  rounded-full hover:bg-surface  transition-all duration-300"
               >
                 {link.label}
               </a>
@@ -34,10 +35,10 @@ const NavBar = () => {
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA
         <div className="hidden md:block">
           <Button size="sm">Contact Me</Button>
-        </div>
+        </div> */}
 
         {/* Mobile Nav */}
 
@@ -63,9 +64,9 @@ const NavBar = () => {
                 {link.label}
               </a>
             ))}
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
+            {/* <Button onClick={() => setIsMobileMenuOpen(false)}>
               Contact Me
-            </Button>
+            </Button> */}
           </div>
         </div>
       )}
