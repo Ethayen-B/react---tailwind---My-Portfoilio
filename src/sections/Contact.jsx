@@ -19,9 +19,15 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: ["+251-943-07-04-95", "+251-970-77-94-31"],
+    label: "Phone1",
+    value: "+251-943-07-04-95",
     href: "tel:+251943070495",
+  },
+    {
+    icon: Phone,
+    label: "Phone 2",
+    value: "+251-970-77-94-31",
+    href: "tel:+251970779431",
   },
   {
     icon: MapPin,
