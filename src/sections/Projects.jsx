@@ -6,11 +6,12 @@ const Projects = () => {
   const catLists = [{ name: "All" }, { name: "Web" }, { name: "Design" }];
 
   const categories = [
-    { id: 1, name: "Project 1", category: "Web", image: "/projects/p1.jpg" , tech: ['React', 'tailwind'] , link: '#' },
-    { id: 2, name: "Project 2", category: "Design", image: "/projects/p2.jpg",tech: ['React', ] , link: '#' },
-    { id: 3, name: "Project 3", category: "Web" , image: "/projects/p2.jpg", tech: ['React', 'tailwind'], link: '#' },
-    { id: 4, name: "Project 4", category: "Web" ,image: "/projects/p1.jpg" ,tech: ['React', 'tailwind','React', 'tailwind',] , link: '#'},
-    { id: 5, name: "Project 5", category: "Design", image: "/projects/p2.jpg" , tech: ['React', 'tailwind'] , link: '#'},
+    { id: 1, name: "A Simple Landing Page", category: "Web", image: "/projects/pic5.png" , tech: ['React', 'tailwind', 'Framer Motion'] , link: 'https://github.com/Ethayen-B/Tizaz-Landing-Page' },
+    { id: 2, name: "Save the date Poster 1", category: "Design", image: "/projects/pic1.png",tech: ['Illustrator', ] , link: '' },
+    { id: 3, name: "Save the date Poster 2", category: "Design" , image: "/projects/pic2.png", tech: ['Illustrator'], link: '' },
+    { id: 4, name: "Todo App", category: "Web" ,image: "/projects/pic6.png" ,tech: ['React', 'tailwind'] , link: 'https://github.com/Ethayen-B/Todo-App'},
+    { id: 5, name: "Reminder Poster", category: "Design", image: "/projects/pic3.png" , tech: ['Illustrator'] , link: ''},
+    { id: 6, name: "Book Review Poster", category: "Design", image: "/projects/pic4.png" , tech: ['Illustrator'] , link: ''},
   ];
 
   const [isActive, setIsActive] = useState("All");

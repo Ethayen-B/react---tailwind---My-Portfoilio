@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const ProjectCard = ({ list }) => {
   return (
     <div className="rounded-xl p-2 bg-surface border-2 border-primary/30 hover:border-primary/50">
-      <img src={list.image} className="rounded-xl w-200 " />
+      <img src={list.image} className="rounded-xl object-cover " />
       <div className="px-3 pt-4 text-center">
         <h2 className="font-semibold text-2xl">{list.name}</h2>
         <div className={`flex flex-wrap justify-center gap-2 mt-4 `}>

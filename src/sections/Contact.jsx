@@ -23,7 +23,7 @@ const contactInfo = [
     value: "+251-943-07-04-95",
     href: "tel:+251943070495",
   },
-    {
+  {
     icon: Phone,
     label: "Phone 2",
     value: "+251-970-77-94-31",
@@ -102,6 +102,11 @@ const Contact = () => {
         <h2 className="mb-3 text-4xl md:text-5xl font-bold text-center leading-tight animate-fade-in animate-delay-400 text-secondary-foreground">
           Get In <span className="text-white font-serif italic"> Touch.</span>
         </h2>
+
+        <p className=" max-w-lg mx-auto mb-6 text-muted-foreground animate-fade-in animate-delay-300 py-4">
+          If you would like to work with me, send me a message and the i will
+          respond to you as soon as possible, or you can give me a call.
+        </p>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           <div className="glass p-8 rounded-3xl border-primary/30 animate-fade-in animate-delay-300">
